@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" width="120" alt="Deprem Bilgisi Logo"/>
+<img src="ic_launcher_round.png" width="120" alt="Deprem Bilgisi Logo"/>
 
 # 🌍 Deprem Bilgisi
 ### Real-Time Earthquake Tracker for Turkey & the World
