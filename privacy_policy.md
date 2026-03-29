@@ -1,123 +1,186 @@
-# Privacy Policy
+# Privacy Policy — Deprem Bilgisi
 
-**Deprem Bilgisi** — Earthquake Information App  
-**Developer:** Arif Onur Bütün  
-**Last Updated:** March 2026
-
----
-
-## Overview
-
-Deprem Bilgisi ("the App") is an independent Android application developed to provide real-time earthquake data and emergency safety tools. This Privacy Policy explains what information the App accesses, how it is used, and your rights as a user.
-
-> **The App does not collect, store, transmit, or share any personal data with the developer or any third party.**
+**Effective Date:** January 1, 2026  
+**Last Updated:** January 1, 2026  
+**Developer:** Arif Onur Bütün — AR-SE Technology
 
 ---
 
-## Information We Access
+## 1. Introduction
 
-### 1. 📍 Location (Fine & Coarse)
-**Permissions:** `ACCESS_FINE_LOCATION`, `ACCESS_COARSE_LOCATION`
+Deprem Bilgisi ("the App") is a free, independent Android application that provides real-time earthquake data and emergency safety tools. This Privacy Policy describes what device capabilities the App accesses, why it accesses them, and how your data is handled.
 
-**Purpose:**  
-Your device location is used **only on your device** to:
-- Filter and display earthquakes near your current position ("Nearby" feature on the map)
-- Calculate the distance between your location and earthquake epicenters
-
-**What we do NOT do:**
-- We do not transmit your location to any server
-- We do not store your location history
-- Location is only accessed when you explicitly tap the "Nearby" button
+> **The App does not collect, store, transmit, or share any personal data. No data ever leaves your device.**
 
 ---
 
-### 2. 🔔 Notifications
-**Permission:** `POST_NOTIFICATIONS`
+## 2. Summary at a Glance
 
-**Purpose:**  
-Used to send local push notifications when an earthquake above your configured magnitude threshold occurs. All notifications are generated **locally on your device** — no notification service or external server is involved.
-
----
-
-### 3. 📞 Phone / Call
-**Permission:** `CALL_PHONE`
-
-**Purpose:**  
-Used exclusively to enable the **112 Emergency Call** button in the Emergency panel. When tapped, the app opens your phone's dialer with 112 pre-filled. No calls are made automatically without your explicit action.
+| What | Collected? | Shared? | Stored Remotely? |
+|:---|:---:|:---:|:---:|
+| Personal identity | ❌ No | ❌ No | ❌ No |
+| Location data | ❌ No | ❌ No | ❌ No |
+| Device identifiers | ❌ No | ❌ No | ❌ No |
+| Usage analytics | ❌ No | ❌ No | ❌ No |
+| Crash reports | ❌ No | ❌ No | ❌ No |
+| Contacts / call logs | ❌ No | ❌ No | ❌ No |
+| App preferences | ✅ Yes | ❌ No | ❌ No (local only) |
 
 ---
 
-### 4. 🌐 Internet
-**Permission:** `INTERNET`
+## 3. Permissions Explained
 
-**Purpose:**  
-Used to fetch real-time earthquake data from the following official public sources:
-- **Kandilli Observatory (KOERI)** — `koeri.boun.edu.tr`
-- **AFAD** — `deprem.afad.gov.tr`
-- **EMSC** — `seismicportal.eu`
-- **Map tiles** — `basemaps.cartocdn.com` (OpenStreetMap/CARTO)
-
-No personal data is included in any of these requests.
+The App requests the following Android permissions. Each permission is used solely for the feature described below and for no other purpose.
 
 ---
 
-### 5. 🔁 Receive Boot Completed
-**Permission:** `RECEIVE_BOOT_COMPLETED`
+### 3.1 `INTERNET`
 
-**Purpose:**  
-Allows the App to reschedule background earthquake monitoring after the device restarts, so you continue receiving notifications without manually reopening the app.
+**Why it's needed:**  
+The App fetches real-time earthquake data from official public sources over the internet. No personal data is included in any outbound request — only a standard HTTP GET is made to retrieve publicly available earthquake feeds.
 
----
+**Data sources accessed:**
 
-### 6. ⚙️ Foreground Service
-**Permission:** `FOREGROUND_SERVICE`
-
-**Purpose:**  
-Required by Android to run background tasks (earthquake monitoring worker) reliably. No persistent foreground service is shown to the user.
-
----
-
-## Data Storage
-
-All user preferences (notification threshold, selected data source, theme, filter settings) are stored **locally on your device** using Android SharedPreferences. This data:
-- Never leaves your device
-- Is not backed up to any cloud service by the developer
-- Can be cleared at any time by uninstalling the app or clearing app data
+| Source | Website | Purpose |
+|:---|:---|:---|
+| Kandilli Observatory (KOERI) | https://koeri.boun.edu.tr | Earthquake data for Turkey & surrounding region |
+| AFAD | https://deprem.afad.gov.tr | Official earthquake data for Turkey |
+| EMSC | https://www.seismicportal.eu | Worldwide earthquake data |
+| CARTO / OpenStreetMap | https://carto.com | Map tile images for the interactive map |
 
 ---
 
-## Third-Party Services
+### 3.2 `ACCESS_FINE_LOCATION` and `ACCESS_COARSE_LOCATION`
 
-The App fetches data from the following third-party public APIs. Please refer to their own privacy policies:
+**Why it's needed:**  
+When you tap the **"Nearby"** button, the App reads your device's current location to calculate the distance between you and earthquake epicenters, and to filter the list and map to show only earthquakes within your chosen radius.
 
-| Service | URL | Purpose |
-|---|---|---|
-| Kandilli Observatory | koeri.boun.edu.tr | Earthquake data (Turkey) |
-| AFAD | deprem.afad.gov.tr | Earthquake data (Turkey, official) |
-| EMSC | seismicportal.eu | Earthquake data (worldwide) |
-| CARTO / OpenStreetMap | carto.com / openstreetmap.org | Map tiles |
-
----
-
-## Children's Privacy
-
-The App does not knowingly collect any information from children under the age of 13. The App contains no user accounts, registration, or data collection of any kind.
+**Important:**
+- Location is only read when you explicitly activate the Nearby feature.
+- Your location is **never transmitted** to any server or third party.
+- Your location is **never stored** — it is used in memory only for the duration of the filter operation.
+- You can revoke this permission at any time in your device's Settings without affecting other app features.
 
 ---
 
-## Changes to This Policy
+### 3.3 `POST_NOTIFICATIONS`
 
-This Privacy Policy may be updated to reflect changes in the App's functionality or legal requirements. The "Last Updated" date at the top of this document will reflect any changes. Continued use of the App after changes constitutes acceptance of the updated policy.
+**Why it's needed:**  
+The App sends local push notifications to alert you when an earthquake exceeds your configured magnitude threshold.
+
+**Important:**
+- All notifications are generated **entirely on your device**.
+- No external push notification service (e.g. Firebase, OneSignal) is used.
+- No notification content or delivery data is sent to any server.
+- You can disable notifications at any time in your device's Settings or within the App's settings screen.
 
 ---
 
-## Contact
+### 3.4 `CALL_PHONE`
 
-If you have any questions about this Privacy Policy, please contact:
+**Why it's needed:**  
+The Emergency panel includes a **"Call 112"** button that allows you to call emergency services with a single tap.
+
+**Important:**
+- This permission is used **only** to pre-fill the emergency number 112 in your phone's dialer.
+- No call is ever initiated automatically or without your explicit tap.
+- No call logs, contact data, or phone numbers are accessed or stored.
+
+---
+
+### 3.5 `RECEIVE_BOOT_COMPLETED`
+
+**Why it's needed:**  
+When your device restarts, Android cancels all scheduled background tasks. This permission allows the App to reschedule its earthquake monitoring worker after a reboot, so you continue receiving notifications without having to manually reopen the App.
+
+**Important:**
+- No data is read or transmitted during this process.
+- Only the App's own internal background task is rescheduled.
+
+---
+
+### 3.6 `FOREGROUND_SERVICE`
+
+**Why it's needed:**  
+Android requires this permission to allow background tasks (WorkManager jobs) to run reliably, even when the App is not in the foreground.
+
+**Important:**
+- No persistent foreground notification is shown to the user.
+- This permission does not grant the App access to any personal data.
+
+---
+
+## 4. Data Storage
+
+All user preferences — including notification threshold, selected data source, theme choice, magnitude filter, and radius setting — are stored **locally on your device** using Android's SharedPreferences mechanism.
+
+- This data **never leaves your device**.
+- It is not synced to any cloud service by the developer.
+- It can be deleted at any time by clearing the App's data or uninstalling the App.
+
+---
+
+## 5. Third-Party Services
+
+The App retrieves earthquake data and map tiles from the following third-party public services. The App does not share any user data with these services — only standard anonymous HTTP requests are made.
+
+| Service | Privacy Policy |
+|:---|:---|
+| Kandilli Observatory (KOERI) — https://koeri.boun.edu.tr | [koeri.boun.edu.tr](https://koeri.boun.edu.tr) |
+| AFAD — https://deprem.afad.gov.tr | [afad.gov.tr](https://www.afad.gov.tr) |
+| EMSC — https://www.seismicportal.eu | [seismicportal.eu](https://www.seismicportal.eu) |
+| OpenStreetMap — https://www.openstreetmap.org | [openstreetmap.org/copyright](https://www.openstreetmap.org/copyright) |
+| CARTO — https://carto.com | [carto.com/privacy](https://carto.com/privacy) |
+
+---
+
+## 6. Advertising and Analytics
+
+The App contains:
+
+- ❌ No advertisements of any kind
+- ❌ No analytics SDKs (e.g. Google Analytics, Firebase Analytics, Mixpanel)
+- ❌ No crash reporting services (e.g. Crashlytics, Sentry)
+- ❌ No A/B testing or feature flag services
+- ❌ No user tracking or behavioral profiling
+
+---
+
+## 7. Children's Privacy
+
+The App does not target children and does not knowingly collect any personal information from anyone, including children under the age of 13 (or the applicable age of digital consent in your jurisdiction). There are no user accounts, registration forms, or data entry fields of any kind in the App.
+
+---
+
+## 8. Data Security
+
+Since the App does not collect or transmit personal data, there is no personal data at risk of breach. All locally stored preferences are protected by Android's standard application sandboxing, which prevents other apps from accessing them.
+
+---
+
+## 9. Your Rights
+
+Because the App does not collect any personal data, there is no personal data to access, correct, export, or delete. You may remove all locally stored preferences at any time by:
+
+- Going to **Settings → Apps → Deprem Bilgisi → Clear Data** on your device, or
+- Uninstalling the App.
+
+---
+
+## 10. Changes to This Policy
+
+This Privacy Policy may be updated to reflect changes in the App's features or applicable legal requirements. The **"Last Updated"** date at the top of this document will be revised accordingly. Continued use of the App after any changes constitutes your acceptance of the updated policy.
+
+---
+
+## 11. Contact
+
+If you have any questions or concerns about this Privacy Policy, please contact:
 
 **Developer:** Arif Onur Bütün  
 **Organization:** AR-SE Technology  
+**Google Play Store Listing:** [Deprem Bilgisi on Google Play](https://play.google.com/store/apps/details?id=com.aob.earthquake)
 
 ---
 
-*This privacy policy is effective as of March 2026.*
+*© 2026 Arif Onur Bütün · AR-SE Technology. All rights reserved.*
