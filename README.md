@@ -52,12 +52,12 @@ Switch between providers with a single tap. All data comes directly from officia
   </tr>
   <tr>
     <td align="center">Boğaziçi University<br/>Turkey & region</td>
-    <td align="center">T.C. Ministry of Interior<br/>Official Turkey data</td>
+    <td align="center">T.C. Disaster & Emergency<br/>Management Authority<br/>Official Turkey data</td>
     <td align="center">European Mediterranean<br/>Seismological Centre<br/>Worldwide coverage</td>
   </tr>
   <tr>
-    <td align="center"><a href="https://koeri.boun.edu.tr">koeri.boun.edu.tr</a></td>
-    <td align="center"><a href="https://deprem.afad.gov.tr">deprem.afad.gov.tr</a></td>
+    <td align="center"><a href="http://www.koeri.boun.edu.tr">koeri.boun.edu.tr</a></td>
+    <td align="center"><a href="https://www.afad.gov.tr">afad.gov.tr</a></td>
     <td align="center"><a href="https://www.seismicportal.eu">seismicportal.eu</a></td>
   </tr>
 </table>
@@ -143,8 +143,8 @@ All earthquake data is fetched directly from official public APIs:
 
 | Source | Coverage | Official URL |
 |:---|:---|:---|
-| Kandilli Observatory (KOERI) | Turkey & surrounding region | https://koeri.boun.edu.tr |
-| AFAD | Turkey (official government data) | https://deprem.afad.gov.tr |
+| Kandilli Observatory (KOERI) | Turkey & surrounding region | http://www.koeri.boun.edu.tr |
+| AFAD | Turkey (official government data) | https://www.afad.gov.tr |
 | EMSC | Worldwide | https://www.seismicportal.eu |
 
 ---
@@ -157,7 +157,7 @@ All earthquake data is fetched directly from official public APIs:
 
 ## Disclaimer
 
-> Deprem Bilgisi is an **independent, informational app**. It is not affiliated with, endorsed by, or officially connected to AFAD, Kandilli Observatory, EMSC, or any government agency. For official earthquake warnings and evacuation orders, always follow guidance from **T.C. AFAD** and authorized government agencies.
+> Deprem Bilgisi is an **independent, informational app**. It is not affiliated with, endorsed by, or officially connected to AFAD, Kandilli Observatory, EMSC, or any government agency. For official earthquake warnings and evacuation orders, always follow guidance from **T.C. AFAD** at [afad.gov.tr](https://www.afad.gov.tr) and authorized government agencies.
 
 ---
 

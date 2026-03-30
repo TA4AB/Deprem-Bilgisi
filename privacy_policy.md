@@ -2,7 +2,8 @@
 
 **Effective Date:** January 1, 2026  
 **Last Updated:** January 1, 2026  
-**Developer:** Arif Onur Bütün — AR-SE Technology
+**Developer:** Arif Onur Bütün — AR-SE Technology  
+**App Package:** com.aob.earthquake
 
 ---
 
@@ -37,14 +38,14 @@ The App requests the following Android permissions. Each permission is used sole
 ### 3.1 `INTERNET`
 
 **Why it's needed:**  
-The App fetches real-time earthquake data from official public sources over the internet. No personal data is included in any outbound request — only a standard HTTP GET is made to retrieve publicly available earthquake feeds.
+The App fetches real-time earthquake data from official public sources over the internet. No personal data is included in any outbound request — only a standard HTTP/HTTPS GET is made to retrieve publicly available earthquake feeds.
 
 **Data sources accessed:**
 
-| Source | Website | Purpose |
+| Source | Official URL | Purpose |
 |:---|:---|:---|
-| Kandilli Observatory (KOERI) | https://koeri.boun.edu.tr | Earthquake data for Turkey & surrounding region |
-| AFAD | https://deprem.afad.gov.tr | Official earthquake data for Turkey |
+| Kandilli Observatory (KOERI) | http://www.koeri.boun.edu.tr | Earthquake data for Turkey & surrounding region |
+| AFAD | https://www.afad.gov.tr | Official earthquake data for Turkey |
 | EMSC | https://www.seismicportal.eu | Worldwide earthquake data |
 | CARTO / OpenStreetMap | https://carto.com | Map tile images for the interactive map |
 
@@ -120,17 +121,17 @@ All user preferences — including notification threshold, selected data source,
 
 ---
 
-## 5. Third-Party Services
+## 5. Data Sources & Third-Party Services
 
-The App retrieves earthquake data and map tiles from the following third-party public services. The App does not share any user data with these services — only standard anonymous HTTP requests are made.
+The App retrieves earthquake data and map tiles from the following official public services. The App does not share any user data with these services — only standard anonymous HTTP/HTTPS requests are made to publicly available APIs.
 
-| Service | Privacy Policy |
-|:---|:---|
-| Kandilli Observatory (KOERI) — https://koeri.boun.edu.tr | [koeri.boun.edu.tr](https://koeri.boun.edu.tr) |
-| AFAD — https://deprem.afad.gov.tr | [afad.gov.tr](https://www.afad.gov.tr) |
-| EMSC — https://www.seismicportal.eu | [seismicportal.eu](https://www.seismicportal.eu) |
-| OpenStreetMap — https://www.openstreetmap.org | [openstreetmap.org/copyright](https://www.openstreetmap.org/copyright) |
-| CARTO — https://carto.com | [carto.com/privacy](https://carto.com/privacy) |
+| Service | Official URL | Privacy Policy |
+|:---|:---|:---|
+| Kandilli Observatory (KOERI) | http://www.koeri.boun.edu.tr | [koeri.boun.edu.tr](http://www.koeri.boun.edu.tr) |
+| AFAD | https://www.afad.gov.tr | [afad.gov.tr/gizlilik](https://www.afad.gov.tr) |
+| EMSC | https://www.seismicportal.eu | [seismicportal.eu](https://www.seismicportal.eu) |
+| OpenStreetMap | https://www.openstreetmap.org | [openstreetmap.org/copyright](https://www.openstreetmap.org/copyright) |
+| CARTO | https://carto.com | [carto.com/privacy](https://carto.com/privacy) |
 
 ---
 
@@ -148,7 +149,7 @@ The App contains:
 
 ## 7. Children's Privacy
 
-The App does not target children and does not knowingly collect any personal information from anyone, including children under the age of 13 (or the applicable age of digital consent in your jurisdiction). There are no user accounts, registration forms, or data entry fields of any kind in the App.
+The App does not target children and does not knowingly collect any personal information from anyone, including children under the age of 13. There are no user accounts, registration forms, or data entry fields of any kind in the App.
 
 ---
 
@@ -167,13 +168,22 @@ Because the App does not collect any personal data, there is no personal data to
 
 ---
 
-## 10. Changes to This Policy
+## 10. Disclaimer
+
+This App is an **independent, informational application**. It is not affiliated with, endorsed by, or officially connected to AFAD, Kandilli Observatory (KOERI), EMSC, or any government agency. All earthquake data is sourced from their publicly available APIs.
+
+For official earthquake warnings and emergency instructions, always refer to:
+- **T.C. AFAD:** https://www.afad.gov.tr
+
+---
+
+## 11. Changes to This Policy
 
 This Privacy Policy may be updated to reflect changes in the App's features or applicable legal requirements. The **"Last Updated"** date at the top of this document will be revised accordingly. Continued use of the App after any changes constitutes your acceptance of the updated policy.
 
 ---
 
-## 11. Contact
+## 12. Contact
 
 If you have any questions or concerns about this Privacy Policy, please contact:
 
